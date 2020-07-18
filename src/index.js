@@ -1,8 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ListPage from './components/ListPage'
-import CreatePage from './components/CreatePage'
-import { Route } from 'react-router'
 import { BrowserRouter } from 'react-router-dom'
 
 import { ApolloClient } from 'apollo-client'
@@ -14,7 +11,12 @@ import { ApolloProvider } from 'react-apollo'
 
 import 'tachyons'
 import './index.css'
+
+// Utils
 import * as serviceWorker from './serviceWorker'
+
+// Routes
+import Routes from './routes/Routes'
 
 const cache = new InMemoryCache()
 
@@ -43,14 +45,7 @@ ReactDOM.render(
   <React.StrictMode>
 	<ApolloProvider client={client}>
 		<BrowserRouter>
-			<>
-			  <Route path="/">
-			  	<ListPage/>
-			  </Route>
-			  <Route path="/create">
-			  	<CreatePage/>
-			  </Route>
-			</>
+			<Routes/>
 		</BrowserRouter>
 	</ApolloProvider>
   </React.StrictMode>,
