@@ -12,7 +12,7 @@
     "apollo-link": "^1.2.14",
     "apollo-link-error": "^1.1.13",
     "apollo-link-http": "^1.5.17",
-    "apollo-server": "^2.13.1",
+    "apollo-server": "^2.25.4",
     "graphql": "^15.0.0",
     "graphql-tag": "^2.10.3",
     "nodemon": "^2.0.4",
